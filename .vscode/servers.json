@@ -1,0 +1,17 @@
+{
+	"version": "1.0.0",
+	"configurations": [
+		{
+			"id": "dl1ic6nmtzlw9elh748jq8xehxmss",
+			"name": "Lab",
+			"host": "lab.fluig.com",
+			"ssl": true,
+			"port": 443,
+			"username": "academy.aluno",
+			"password": "eyJpdiI6IjNmNmE4MTE4M2U0NmMyNmU3ZjMwYzQ3YjdiMTRlNWMzIiwic2FsdCI6IjNiOTNkZjdiNzFhMTgzNTgzYjIxMDMxMjcwM2VhMmRlIiwidGV4dCI6ImY5MGRkMTBmZjIyMjFlNGNhMmViZjRjZTI5Mzk2ZDlmIn0=",
+			"userCode": "academy.aluno",
+			"confirmExporting": false,
+			"companyId": 1
+		}
+	]
+}
