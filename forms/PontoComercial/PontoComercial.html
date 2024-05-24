@@ -12,7 +12,7 @@
 	<div class="fluig-style-guide">
 		<form name="form" role="form">
 
-			<div class="panel panel-primary">
+			<div class="panel panel-primary" id="requisitanteId">
 				<div class="panel-heading">
 					<h3 class="panel-title">
 						<i class="flaticon flaticon-person icon-sm" aria-hidden="true"></i>
@@ -22,33 +22,41 @@
 				<div class="panel-body">
 					<div class="row">
 						<div class="form-group col-md-4">
-							<label for="emailFormUser">Email</label>
-							<input type="email" name="emailFormUser" class="form-control" id="emailFormUser"
+							<label for="nomeRequisitante">Nome</label>
+							<input type="text" name="nomeRequisitante" class="form-control" id="nomeRequisitante"
 								placeholder="Enter email" />
 						</div>
 
 						<div class="form-group col-md-4">
-							<label for="passwordFormUser">Senha</label>
-							<input type="password" name="passwordFormUser" class="form-control" id="passwordFormUser"
+							<label for="emailRequisitante">Email</label>
+							<input type="email" name="emailRequisitante" class="form-control" id="emailRequisitante"
+								placeholder="Enter email" />
+						</div>
+
+						<div class="form-group col-md-4">
+							<label for="senhaRequisitante">Senha</label>
+							<input type="password" name="senhaRequisitante" class="form-control" id="senhaRequisitante"
 								placeholder="Digite sua Senha" />
 						</div>
 
 						<div class="form-group col-md-2">
-							<label for="phoneFormUser">Telefone</label>
-							<input type="tel" name="phoneFormUser" class="form-control" id="phoneFormUser"
+							<label for="telefoneRequisitante">Telefone</label>
+							<input type="tel" name="telefoneRequisitante" class="form-control" id="telefoneRequisitante"
 								placeholder="Digite seu Telefone" />
 						</div>
 					</div>
 
 					<div class="row">
-						<div class="form-group col-md-4">
-							<label for="rgFormUser">RG (Identidade)</label>
-							<input type="text" name="rgFormUser" class="form-control" id="rgFormUser" placeholder="Digite seu Nome" />
+						<div class="form-group col-md-2">
+							<label for="rgRequisitante">RG (Identidade)</label>
+							<input type="text" name="rgRequisitante" class="form-control" id="rgRequisitante"
+								placeholder="Digite seu Nome" />
 						</div>
 
 						<div class="col-md-2">
-							<label for="CalendarFormUser">Data de Nascimento</label>
-							<input type="text" class="form-control" id="CalendarFormUser" name="CalendarFormUser" />
+							<label for="dataNascimentoRequisitante">Data de Nascimento</label>
+							<input type="text" class="form-control" id="dataNascimentoRequisitante"
+								name="dataNascimentoRequisitante" />
 						</div>
 					</div>
 				</div>
@@ -63,45 +71,15 @@
 				</div>
 				<div class="panel-body">
 					<div class="row">
-
-						<div class="form-group col-md-6">
-							<label>Responsável</label>
-
-
-							<input type="zoom" id="c7_total" name="c7_total" data-zoom="{
-								'displayKey':'colleagueName',
-								'datasetId':'colleague',
-								'maximumSelectionLength':'2',
-								'placeholder':'Escolha o usuário',
-								'fields':[
-										{
-											'field':'colleagueId',
-											'label':'ID'
-										},{
-											'field':'colleagueName',
-											'label':'Nome',
-											'standard':'true'
-										},{
-											'field':'login',
-											'label':'Login'
-										},{
-											'field':'mail',
-											'label':'Email'
-										}
-								]
-						}" />
-						</div>
-
 						<div class="form-group col-md-2">
-							<label for="typePontoComercialFormUser">Tipo</label>
+							<label for="tipoPontoComercial">Tipo</label>
 							<div class="radio">
 								<label>
-									<input type="radio" name="typePontoComercialFormUser" id="typePontoComercialFormUser"
-										value="quiosque">
+									<input type="radio" name="tipoPontoComercial" id="tipoPontoComercial" value="quiosque">
 									Quiosque
 								</label>
 								<label>
-									<input type="radio" name="typePontoComercialFormUser" id="typePontoComercialFormUser" value="loja">
+									<input type="radio" name="tipoPontoComercial" id="tipoPontoComercial" value="loja">
 									Loja de Varejo
 								</label>
 							</div>
@@ -111,31 +89,31 @@
 							<label>Dias de Trabalho</label>
 							<div class="checkbox">
 								<label>
-									<input type="checkbox" name="segunda" value="segunda">
+									<input type="checkbox" name="segundaPontoComercial" value="segundaPontoComercial">
 									Segunda
 								</label>
 								<label>
-									<input type="checkbox" name="terca" value="terca">
+									<input type="checkbox" name="tercaPontoComercial" value="tercaPontoComercial">
 									Terca
 								</label>
 								<label>
-									<input type="checkbox" name="quarta" value="quarta">
+									<input type="checkbox" name="quartaPontoComercial" value="quartaPontoComercial">
 									Quarta
 								</label>
 								<label>
-									<input type="checkbox" name="quinta" value="quinta">
+									<input type="checkbox" name="quintaPontoComercial" value="quintaPontoComercial">
 									Quinta
 								</label>
 								<label>
-									<input type="checkbox" name="sexta" value="sexta">
+									<input type="checkbox" name="sextaPontoComercial" value="sextaPontoComercial">
 									Sexta
 								</label>
 								<label>
-									<input type="checkbox" name="sabado" value="sabado">
-									Sabado
+									<input type="checkbox" name="sabadoPontoComercial" value="sabadoPontoComercial">
+									Sábado
 								</label>
 								<label>
-									<input type="checkbox" name="domingo" value="domingo">
+									<input type="checkbox" name="domingoPontoComercial" value="domingoPontoComercial">
 									Domingo
 								</label>
 							</div>
@@ -144,52 +122,99 @@
 
 					<div class="row">
 						<div class="form-group col-md-4">
-							<label for="cepFormUser">CEP</label>
-							<input type="text" name="cepFormUser" class="form-control" id="cepFormUser" placeholder="Digite seu CEP"
-								mask="00000-000" />
+							<label for="cepPontoComercial">CEP</label>
+							<input type="text" name="cepPontoComercial" class="form-control" id="cepPontoComercial"
+								placeholder="Digite seu CEP" mask="00000-000" />
 						</div>
 
 						<div class="col-md-4">
-							<label for="logradouroFormUser">Logradouro</label>
-							<input type="text" name="logradouroFormUser" class="form-control" id="logradouroFormUser"
+							<label for="logradouroPontoComercia">Logradouro</label>
+							<input type="text" name="logradouroPontoComercia" class="form-control" id="logradouroPontoComercia"
 								placeholder="Digite seu Logradouro" />
 						</div>
 
 						<div class="col-md-2">
-							<label for="numeroFormUser">Número</label>
-							<input type="text" name="numeroFormUser" placeholder="Digite seu Número" class="form-control"
-								id="numeroFormUser" />
+							<label for="numeroPontoComercial">Número</label>
+							<input type="text" name="numeroPontoComercial" placeholder="Digite seu Número" class="form-control"
+								id="numeroPontoComercial" />
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="form-group col-md-4">
-							<label for="bairroFormUser">Bairro</label>
-							<input type="text" name="bairroFormUser" class="form-control" placeholder="Digite seu Bairro"
-								id="bairroFormUser" />
+							<label for="bairroPontoComercial">Bairro</label>
+							<input type="text" name="bairroPontoComercial" class="form-control" placeholder="Digite seu Bairro"
+								id="bairroPontoComercial" />
 						</div>
 
 						<div class="form-group col-md-4">
-							<label for="localidadeFormUser">Cidade</label>
-							<input type="text" name="localidadeFormUser" class="form-control" placeholder="Digite sua Cidade"
-								id="localidadeFormUser" />
+							<label for="cidadePontoComercial">Cidade</label>
+							<input type="text" name="cidadePontoComercial" class="form-control" placeholder="Digite sua Cidade"
+								id="cidadePontoComercial" />
 						</div>
 
 						<div class="form-group col-md-4">
-							<label for="estadoFormUser">Estado</label>
-							<input type="text" name="estadoFormUser" class="form-control" placeholder="Digite seu Estado"
-								id="estadoFormUser" />
+							<label for="estadoPontoComercial">Estado</label>
+							<input type="text" name="estadoPontoComercial" class="form-control" placeholder="Digite seu Estado"
+								id="estadoPontoComercial" />
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="form-group col-md-12">
-							<label for="observacaoFormUser">Observação</label>
-							<textarea name="observacaoFormUser" rows="5" class="form-control" id="observacaoFormUser"
+							<label for="observacaoPontoComercial">Observação</label>
+							<textarea name="observacaoPontoComercial" rows="5" class="form-control" id="observacaoPontoComercial"
 								placeholder="Observação"></textarea>
 						</div>
 					</div>
 
+				</div>
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<i class="flaticon flaticon-file-date icon-sm" aria-hidden="true"></i>
+						Responsáveis
+					</h3>
+				</div>
+				<div class="panel-body">
+					<table tablename="responsaveisTabela" class="table table-hover" addbuttonlabel="Adicionar Responsável"
+						addbuttonclass="btn btn-info">
+						<thead>
+							<tr>
+								<th>Responsáveis</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="zoom" id="responsavelPontoComercial" name="responsavelPontoComercial" data-zoom="{
+										'displayKey':'colleagueName',
+										'datasetId':'colleague',
+										'maximumSelectionLength':'2',
+										'placeholder':'Escolha o usuário',
+										'fields':[
+												{
+													'field':'colleagueId',
+													'label':'ID'
+												},{
+													'field':'colleagueName',
+													'label':'Nome',
+													'standard':'true'
+												},{
+													'field':'login',
+													'label':'Login'
+												},{
+													'field':'mail',
+													'label':'Email'
+												}
+										]
+								}" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 
@@ -205,8 +230,9 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="form-group col-md-2">
-								<label for="valorFormUser">Valor</label>
-								<input type="number" name="valorFormUser" id="valorFormUser" class="form-control">
+								<label for="valorFinanceiro">Valor</label>
+								<input mask="#00.000.000.000.000,00" type="text" name="valorFinanceiro" id="valorFinanceiro"
+									class="form-control">
 							</div>
 						</div>
 					</div>
