@@ -75,7 +75,7 @@ function validateForm(form) {
     form.getValue("sabado") != "on" &&
     form.getValue("domingo") != "on"
   ) {
-    throw "Por favor, preencha o campo Dias Trabalhados.";
+    throw i18n.translate("diasTrabalhadosValidate");
   }
 
   var responsaveis = form.getChildrenIndexes("responsaveisTabela");
