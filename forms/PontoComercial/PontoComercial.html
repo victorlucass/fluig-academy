@@ -192,24 +192,18 @@
 							<tr>
 								<td>
 									<input type="zoom" id="responsavelPontoComercial" name="responsavelPontoComercial" data-zoom="{
-										'displayKey':'colleagueName',
-										'datasetId':'colleague',
+										'displayKey':'nome',
+										'datasetId':'dsColleagueVT',
 										'maximumSelectionLength':'2',
 										'placeholder':'Escolha o usuário',
 										'fields':[
 												{
-													'field':'colleagueId',
+													'field':'login',
 													'label':'ID'
 												},{
-													'field':'colleagueName',
+													'field':'nome',
 													'label':'Nome',
 													'standard':'true'
-												},{
-													'field':'login',
-													'label':'Login'
-												},{
-													'field':'mail',
-													'label':'Email'
 												}
 										]
 								}" />
@@ -231,6 +225,19 @@
 				<div class="panel-body">
 					<div class="panel-body">
 						<div class="row">
+
+							<div class="form-group col-md-2">
+								<label for="moeda">Moeda</label>
+								<select name="moeda" id="moeda" class="form-control" dataset="ds_MoedasFormVT" datasetkey="sigla"
+									datasetvalue="moeda">
+
+									<!-- Resultado -->
+									<!-- <option value="BRL">BRL</option>
+									<option value="USD">USD</option>
+									<option value="EUR">EUR</option> -->
+								</select>
+							</div>
+
 							<div class="form-group col-md-2">
 								<label for="valorFinanceiro">Valor</label>
 								<input mask="#00.000.000.000.000,00" type="text" name="valorFinanceiro" id="valorFinanceiro"
