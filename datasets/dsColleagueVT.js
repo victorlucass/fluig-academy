@@ -1,45 +1,36 @@
 function createDataset(fields, constraints, sortFields) {
-  var dataset = DatasetBuilder.newDataset();
+  const dataset = DatasetBuilder.newDataset();
   dataset.addColumn("login");
   dataset.addColumn("nome");
 
-  var filterColleagueGroup = DatasetFactory.createConstraint(
+  const filter = DatasetFactory.createConstraint(
     "colleagueGroupPK.groupId",
     "GrupoVT",
     "GrupoVT",
     ConstraintType.MUST
   );
 
-  var datasetColleagueGroup = DatasetFactory.getDataset(
+  const colleagueGroups = DatasetFactory.getDataset(
     "colleagueGroup",
     null,
-    new Array(filterColleagueGroup),
+    [filter],
     null
   );
 
-  for (var i = 0; i < datasetColleagueGroup.rowsCount; i++) {
-    var colleagueId = datasetColleagueGroup.getValue(
+  const colleagues = DatasetFactory.getDataset("colleague", null, null, null);
+
+  for (let i = 0; i < colleagueGroups.rowsCount; i++) {
+    var colleagueId = colleagueGroups.getValue(
       i,
       "colleagueGroupPK.colleagueId"
     );
 
-    var datasetColleagueAll = DatasetFactory.getDataset(
-      "colleague",
-      null,
-      null,
-      null
-    );
+    for (let j = 0; j < colleagues.rowsCount; j++) {
+      var currentId = colleagues.getValue(j, "colleaguePK.colleagueId");
+      var currentName = colleagues.getValue(j, "colleagueName");
 
-    for (var j = 0; j < datasetColleagueAll.rowsCount; j++) {
-      var _colleagueId = datasetColleagueAll.getValue(
-        j,
-        "colleaguePK.colleagueId"
-      );
-
-      var _colleagueName = datasetColleagueAll.getValue(j, "colleagueName");
-
-      if (colleagueId == _colleagueId) {
-        dataset.addRow(new Array(_colleagueId, _colleagueName));
+      if (colleagueId == currentId) {
+        dataset.addRow([colleagueId, currentName]);
       }
     }
   }
